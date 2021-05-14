@@ -28,6 +28,10 @@ export class Sort {
                 return 0;
             }			
 		});
-		return this.inputArray;
+		return this.inputArray.filter((x:any)=>{
+            if(x?.name?.value != 'AWSJSON'){
+                return x;
+            }
+        });
     }
 }
