@@ -20,9 +20,9 @@ export class Sort {
                 b = b[propertyArr[i]];
                 i++;
             }
-            if (a[0]?.toLowerCase() < b[0]?.toLowerCase()) {
+            if (a?.toLowerCase() < b?.toLowerCase()) {
                 return -1;
-            } else if (a[0]?.toLowerCase() > b[0]?.toLowerCase()) {
+            } else if (a?.toLowerCase() > b?.toLowerCase()) {
                 return 1;
             } else {
                 return 0;

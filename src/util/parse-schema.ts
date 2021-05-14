@@ -18,7 +18,7 @@ export class SchemaParser {
                 ]
             });
         }catch(e){
-            console.log(e);
+           throw e;
         }
        
         const defs = getDocumentNodeFromSchema(originalSchema);
