@@ -3,7 +3,7 @@
 	"displayName": "GraphQL Schema Sort",
 	"description": "An extension to sort Graph QL schema",
 	"version": "0.0.1",
-	"publisher":"splitbit",
+	"publisher":"Splitbitio",
 	"engines": {
 		"vscode": "^1.56.0"
 	},

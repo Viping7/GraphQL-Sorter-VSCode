@@ -20,18 +20,19 @@ export function activate(context: vscode.ExtensionContext) {
 			var document = editor.document;
 			var fileName = document.fileName;
 			if (GQL_REGEX.test(fileName)) {
-				var sortedData = await initiateSort(fileName,editor,1);
-				editor.edit((editBuilder) => {
-					try{
-						editBuilder.replace(editor.selection, sortedData)
-					}
-					catch(e){
-						console.log(e);
-						vscode.window.showInformationMessage("Error while sorting schema");
-					}
-				})
-				vscode.window.showInformationMessage("File sorting completed");
-				return;
+				try{
+					var sortedData = await initiateSort(fileName,editor,1);
+					editor.edit((editBuilder) => {
+							editBuilder.replace(editor.selection, sortedData)
+							vscode.window.showInformationMessage("File sorting completed");
+					})
+					return;
+				}catch(e){
+					console.log(e);
+					vscode.window.showErrorMessage(e.message);
+					vscode.window.showErrorMessage("Error while sorting schema (Possible schema validation failure)");
+				}
+				
 			} else {
 				vscode.window.showInformationMessage("Please with a graphQl schema file");
 			}
