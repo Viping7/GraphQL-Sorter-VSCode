@@ -1,10 +1,15 @@
 {
 	"name": "gqlsort",
-	"displayName": "gqlSort",
+	"displayName": "GraphQL Schema Sort",
 	"description": "An extension to sort Graph QL schema",
 	"version": "0.0.1",
+	"publisher":"splitbit",
 	"engines": {
 		"vscode": "^1.56.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Viping7/GraphQL-Sorter-VSCode"
 	},
 	"categories": [
 		"Other"
