@@ -2,7 +2,8 @@
 	"name": "gqlsort",
 	"displayName": "GraphQL Schema Sort",
 	"description": "An extension to sort Graph QL schema",
-	"version": "0.0.1",
+	"version": "0.0.2",
+	"icon": "assets/icon.png",
 	"publisher":"Splitbitio",
 	"engines": {
 		"vscode": "^1.56.0"
